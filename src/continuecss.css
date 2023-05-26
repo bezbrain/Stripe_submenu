@@ -81,6 +81,30 @@
   display: block;
 }
 
+.sub-header-con::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: -1;
+  animation-name: shoot-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes shoot-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .sub-header-con {
   position: absolute;
   top: 60px;
@@ -101,6 +125,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .add-submenu-css aside span {

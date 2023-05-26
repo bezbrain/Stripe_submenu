@@ -10,10 +10,6 @@ const Header = () => {
     setSubHeader(true);
   };
 
-  const handleOut = () => {
-    setSubHeader(false);
-  };
-
   return (
     <>
       <header>
@@ -29,10 +25,7 @@ const Header = () => {
           <ul>
             {headerLinks.map((each, index) => (
               <li key={each.id}>
-                <button
-                  onMouseOver={() => handleHover(index)}
-                  onMouseOut={handleOut}
-                >
+                <button onMouseOver={() => handleHover(index)}>
                   {each.linkName}
                 </button>
               </li>
